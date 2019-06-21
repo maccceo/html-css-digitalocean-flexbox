@@ -1,11 +1,8 @@
 /* COSA MANCA
+- Utilizzare flexbox ogni volta che serve
 - Ripulita del codice
 - Convertire le classi usate una volta sola in ID
 - (convertire la tabella in ul)
-
-@ @ @ ATTENZIONE @ @ @
-Continuo il progetto nella repository "html-css-digitalocean-flexbox"
-in cui integro i concetti Flexbox
 */
 
 * {
@@ -44,6 +41,7 @@ body {
 	margin: 60px 0 30px;
 }
 
+le iconcine nelle sezioni "Deploy and scale" e "Build for business"
 .blueicon {
 	height: 2.3rem;
 	margin: -4px 3px 0 0;
@@ -82,66 +80,66 @@ body {
 /*----------------*/
 /* # # NAVBAR # # */
 /*----------------*/
-/*navbar
-	navbar-top
-	  navbar__tl   (top-left)
-	  navbar__tr
-	 navbar-bottom
-	   navbar__bl
-	   navbar__br
+/*nav
+	  navbar-top
+	    navbar__angle
+	    navbar__angle
+	   navbar-bottom
+	     navbar__angle
+	     navbar__angle
+	   navbar-narrow
+	     digitailocean logo
+	     hamburger icon
 */ 
-.navbar * {
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+header * {
 	color: #091F4E;
 	font-weight: 600;
 }
 
-.navbar-top {
-	height: 40px;
-	padding: 10px 20px;
-	border-bottom: 1px solid lightgrey;
-}
-
-.navbar-bottom {
-	height: 60px;
-	padding: 15px 20px;
-}
-
-#navbar-narrow {
-	display: none;
-	height: 50px;
-	padding: 12px 20px;
-	background-color: rgba(0,0,0,0);
-}
-
-/*necessario per centrare i suoi elementi, più alti del tasto Sign up*/
-.navbar__bl {
-	padding: 5px 0;
-}
-
-.navbar__nl {
-	padding: 4px 0;
-}
-
-/*liste, immagini, tutto va su una linea*/
-.navbar__tl *, .navbar__tr *,
-.navbar__bl *, .navbar__br * {
-	display: inline-block;
-}
-
-/*Bootstrap aggiunge un margine negativo che tolgo*/
-.navbar__tr, .navbar__br, .navbar__nr {
-	margin-right: 0;
-}
-
-.navbar li {
+header li {
 	padding-right: 10px;
 }
 
-.navbar a:hover {
+header a:hover {
 	color: #0065FC;
 	text-decoration: none;
 }
 
+/*navbar-top+bottom+narrow*/
+.navbar-line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+#navbar-top {
+	height: 40px;
+	border-bottom: 1px solid lightgrey;
+}
+
+#navbar-bottom {
+	height: 60px;
+}
+
+/*quella che appare nella visualizzazione per schermi piccoli*/
+#navbar-narrow {
+	display: none;
+	height: 50px;
+}
+
+/*liste, immagini, tutto va su una linea*/
+.navbar__angle * {
+	display: inline-block;
+}
+
+/*quadrato NEW azzurro tutto in alto a sinistra*/
 #navbar__new-logo {
 	margin-top: -3px;
 	padding-right: 5px;
@@ -164,35 +162,25 @@ body {
 	background-color: #0065FC;
 }
 
+/*visualizza navbar ridotta*/
 @media (max-width: 992px) { 
 	
 	#navbar-narrow {
-		display: block;
+		display: flex;
 	}
 
-	.navbar-top, .navbar-bottom {
+	#navbar-top, #navbar-bottom {
 		display: none;
 	}
 
 	body {
-		padding-top: 0;
+		padding-top: 50px;
 	}
 
 }
 
-/*Correzione a comportamento Bootstrap*/
-@media (max-width: 767px) { 
-    
-    .navbar__nr {
-	    margin-top: -28px;
-	    float: right;
-	}
-	
-	#navbar__logo {
-		padding-left: 12px;
-	}
 
-}
+
 
 
 /*-------------------*/

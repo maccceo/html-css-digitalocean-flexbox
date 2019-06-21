@@ -8,28 +8,29 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+	<body>
 
 		<!-- navbar -->
 		<header>
-			<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-				<div class="container-fluid navbar-top">
-					<div class="navbar-header navbar__tl">
+			<nav role="navigation">
+				<div id="navbar-top" class="navbar-line">
+					<div class="navbar__angle">
 						<img id="navbar__new-logo" src="Resources/icons/new.png">
 						<p>DigitalOcean Kubermeters is now Generally available.<img class="arrow--black" src="Resources/icons/icon-black.png"></p>
 					</div>
-					<div class="navbar-right navbar__tr">
+					<div class="navbar__angle">
 						<ul >
-							<li><a  href="#">Docs</a></li>
-							<li><a  href="#">Support</a></li>
-							<li><a  href="#">Sales</a></li>
-							<li><a  href="#">Log in</a></li>
+							<li><a href="#">Docs</a></li>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Sales</a></li>
+							<li><a href="#">Log in</a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="container-fluid navbar-bottom">
-					<div class="navbar-header navbar__bl">
-						<a class="navar-brand" href="#"><img id="navbar__logo" src="Resources/images/digitalocean-logo.png" alt="Digital Ocean logo"></a>
+
+				<div id="navbar-bottom" class="navbar-line">
+					<div class="navbar__angle">
+						<a href="#"><img id="navbar__logo" src="Resources/images/digitalocean-logo.png" alt="Digital Ocean logo"></a>
 						<ul>
 							<li><a href="#">Products<img class="arrow--black arrow--90deg" src="Resources/icons/icon-black.png"></a></li>
 							<li><a href="#">Marketplace</a></li>
@@ -39,21 +40,17 @@
 							<li><a href="#">Pricing</a></li>
 						</ul>
 					</div>
-					<div class="navbar-right navbar__br">
+					<div class="navbar__angle">
 						<button id="navbar__signup-button" class="btn btn-default btn-sm">Sign Up</button>
 					</div>
 				</div>
-				<div id="navbar-narrow" class="container-fluid">
-					<div class="navbar-header navbar__nl">
-						<a class="navar-brand" href="#"><img id="navbar__logo" src="Resources/images/digitalocean-logo.png" alt="Digital Ocean logo"></a>
-					</div>
-					<div class="navbar-right navbar__nr">
-						<a href="#"><img src="Resources/icons/hamburger.png"></a>
-					</div>
+
+				<div id="navbar-narrow" class="navbar-line">
+					<a class="navar-brand" href="#"><img id="navbar__logo" src="Resources/images/digitalocean-logo.png" alt="Digital Ocean logo"></a>
+					<a href="#"><img src="Resources/icons/hamburger.png"></a>
 				</div>
 
-				</div>
-			</div>
+			</nav>
 		</header>
 
 		<main class="container-fluid">
@@ -427,5 +424,5 @@
 			</div>
 		</footer>
 
-</body>
+	</body>
 </html>
