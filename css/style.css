@@ -1,0 +1,648 @@
+/* COSA MANCA
+- Ripulita del codice
+- Convertire le classi usate una volta sola in ID
+- (convertire la tabella in ul)
+
+@ @ @ ATTENZIONE @ @ @
+Continuo il progetto nella repository "html-css-digitalocean-flexbox"
+in cui integro i concetti Flexbox
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul,p {
+	margin: 0;
+}
+
+ul>li {
+	list-style-type: none;
+}
+
+h1,h2 {
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	padding-top: 100px;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+.section__header {
+	text-align: center;
+	margin: 60px 0 30px;
+}
+
+.blueicon {
+	height: 2.3rem;
+	margin: -4px 3px 0 0;
+}
+
+.dot {
+	display: inline-block;
+	margin-right: 2px;
+	height: 12px;
+	width: 12px;
+	border: 2px #0065FC solid;
+	border-radius: 50%;
+}
+
+.dot--selected {
+	background-color: #0065FC;
+}
+
+.arrow--blue, .arrow--cyan, .arrow--black {
+	margin-top: -1.3px;
+	height: 1.6rem;
+}
+
+.arrow--slideshow {
+	height: 5rem;
+}
+
+.arrow--90deg {
+	transform: rotate(90deg);
+}
+
+.arrow--180deg {
+	transform: rotate(180deg);
+}
+
+/*----------------*/
+/* # # NAVBAR # # */
+/*----------------*/
+/*navbar
+	navbar-top
+	  navbar__tl   (top-left)
+	  navbar__tr
+	 navbar-bottom
+	   navbar__bl
+	   navbar__br
+*/ 
+.navbar * {
+	color: #091F4E;
+	font-weight: 600;
+}
+
+.navbar-top {
+	height: 40px;
+	padding: 10px 20px;
+	border-bottom: 1px solid lightgrey;
+}
+
+.navbar-bottom {
+	height: 60px;
+	padding: 15px 20px;
+}
+
+#navbar-narrow {
+	display: none;
+	height: 50px;
+	padding: 12px 20px;
+	background-color: rgba(0,0,0,0);
+}
+
+/*necessario per centrare i suoi elementi, più alti del tasto Sign up*/
+.navbar__bl {
+	padding: 5px 0;
+}
+
+.navbar__nl {
+	padding: 4px 0;
+}
+
+/*liste, immagini, tutto va su una linea*/
+.navbar__tl *, .navbar__tr *,
+.navbar__bl *, .navbar__br * {
+	display: inline-block;
+}
+
+/*Bootstrap aggiunge un margine negativo che tolgo*/
+.navbar__tr, .navbar__br, .navbar__nr {
+	margin-right: 0;
+}
+
+.navbar li {
+	padding-right: 10px;
+}
+
+.navbar a:hover {
+	color: #0065FC;
+	text-decoration: none;
+}
+
+#navbar__new-logo {
+	margin-top: -3px;
+	padding-right: 5px;
+	height: 20px;
+}
+
+#navbar__logo {
+	margin-top: -4px;
+	padding-right: 10px;
+}
+
+#navbar__signup-button {
+	color: #0065FC;
+	font-weight: 700;
+	border: 1px #0065FC solid;
+}
+
+#navbar__signup-button:hover {
+	color: #FFF;
+	background-color: #0065FC;
+}
+
+@media (max-width: 992px) { 
+	
+	#navbar-narrow {
+		display: block;
+	}
+
+	.navbar-top, .navbar-bottom {
+		display: none;
+	}
+
+	body {
+		padding-top: 0;
+	}
+
+}
+
+/*Correzione a comportamento Bootstrap*/
+@media (max-width: 767px) { 
+    
+    .navbar__nr {
+	    margin-top: -28px;
+	    float: right;
+	}
+	
+	#navbar__logo {
+		padding-left: 12px;
+	}
+
+}
+
+
+/*-------------------*/
+/* # # JUMBOTRON # # */
+/*-------------------*/
+/* jumbotron
+	  row
+		jumbotron__left-section
+		jumbotron__right-section
+*/
+.jumbotron {
+	background-image: url("../Resources/images/jumbotron-bg.jpg");
+	background-position: center;
+	background-size: cover;
+	color: #FFF;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+	border-radius: 0;
+}
+
+.jumbotron__left-section {
+	margin: 70px 10px;
+}
+
+.jumbotron__left-section h1 {
+	font-size: 56px;
+}
+
+.jumbotron__left-section p {
+	margin-top: 20px;
+	line-height: 32px;
+}
+
+.jumbotron__right-section {
+	width: 300px;
+	float: right;
+	margin-right: 50px;
+	padding: 20px;
+	text-align: center;
+	color: #000;
+	background-color: white;
+}
+
+.jumbotron__right-section h2 {
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+
+.jumbotron__right-section p {
+	margin-top: 20px;
+	font-size: 12px;
+}
+
+.jumbotron__right-section__button {
+	width: 250px;
+	padding: 7px;
+	margin-top: 13px;
+}
+
+/*centra contenitore bianco a dx con visualizzaz. verticale*/
+@media (max-width: 992px) { 
+	.jumbotron__right-section {
+		float: none;
+		margin: 0 auto 60px auto;
+	}
+}
+
+#google-logo {
+	margin: -2px 5px 0 0;
+}
+/*tolgo bordo alle caselle di inserimento dati del form*/
+.form-control {
+	border: 0;
+    box-shadow: none;
+}
+
+
+
+
+
+/*------------------------*/
+/* # # PARTNER BRIDGE # # */
+/*------------------------*/
+/* partner-bridge
+	  row
+		<h5>
+		partner-bridge__icon-container
+		<a>
+*/
+.partner-bridge {
+	text-align: center;
+}
+
+.partner-bridge h5 {
+	text-transform: uppercase;
+	color: darkgrey;
+	font-weight: 600;
+}
+
+.partner-bridge__icon-container img {
+	height: 30px;
+	margin: 20px;
+}
+
+.partner-bridge a {
+	display: inline-block;
+	margin: 10px;
+}
+
+/*sposto un po' su certi loghi dai 20px di partenza per centrarli meglio*/
+#docker-logo {
+	margin-top: 12px;
+}
+
+#wework-logo {
+	margin-top: 8px;
+}
+
+
+
+
+
+/*--------------------------*/
+/* # # FEATURES SECTION # # */
+/*--------------------------*/
+/* features-section
+	  row
+		features-section__header
+	  row
+		features-section__leftmenu
+		features-section__rightcontent
+		  features-section__rightcontent__container
+		  features-section__rightcontent__container
+		  features-section__rightcontent__container
+		  features-section__rightcontent__container
+*/
+
+.features-section__leftmenu {
+	height: 400px;		/*da md in giù dovrà ridursi*/
+	padding: 30px 100px;
+}
+
+.features-section__leftmenu li {
+	padding: 12px 20px;
+}
+
+.features-section__leftmenu li a {
+	color: #000;
+}
+
+.features-section__leftmenu li:hover {
+	font-weight: 700;
+	border-left: 2.5px solid blue;
+}
+
+.features-section__leftmenu li:hover a {
+	text-decoration: none;
+}
+
+.features-section__rightcontent {
+	padding-bottom: 60px;
+}
+
+.features-section__rightcontent__container {
+	padding: 15px 30px;
+}
+
+
+@media (max-width: 1200px) { 
+
+	.features-section__leftmenu {
+		height: 38px;
+		padding: 0;
+		text-align: center;
+	}
+
+	.features-section__leftmenu li {
+		display: inline-block;
+	}
+
+	.features-section__leftmenu li:hover {
+		border-left: 0;
+		border-bottom: 2.5px solid blue;
+	}
+
+ }
+
+
+
+
+
+/*---------------------------*/
+/* # # SLIDESHOW SECTION # # */
+/*---------------------------*/
+/* slideshow-section
+	  row
+		slideshow-section__header
+	  row
+		slideshow-section__slideshow
+*/
+.slideshow-section__slideshow {
+	text-align: center;
+	padding-bottom: 60px;
+}
+#slideshow-section__slideshow__image {
+	max-width: 600px;
+	margin: 20px 0;
+}
+
+
+
+
+
+/*--------------------------------*/
+/* # # BUILD4BUSINESS SECTION # # */
+/*--------------------------------*/
+/* b4b-section
+	  row
+		b4b-section__header
+	  row
+		b4b-section__content
+		  b4b-section__content__section
+		  b4b-section__content__section
+		  b4b-section__content__section
+*/
+.b4b-section__header {
+	margin-bottom: 10px;
+}
+
+.b4b-section__content__section {
+	padding: 15px 30px 60px;
+}
+
+.b4b-section__content__section a {
+	display: inline-block;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+
+
+
+
+/*--------------------------*/
+/* # # DEEPBLUE SECTION # # */
+/*--------------------------*/
+/* deepblue-section
+	  row
+		deepblue-section__header
+	  row
+		deepblue-section__content
+		  deepblue-section__content__table
+		  deepblue-section__content__table
+*/
+.deepblue-section {
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+		url("../Resources/images/deepblue-bg.jpg");
+	background-position: top;
+	background-size: cover;
+	color: #FFF;
+}
+
+.deepblue-section__content {
+	margin-bottom: 60px;
+}
+
+.deepblue-section__table > table {
+	margin: 0 auto;
+}
+
+.deepblue-section tr {
+	width: 100%;
+	border-bottom: 1px solid grey;
+}
+
+.deepblue-section tr:last-child {
+	border-bottom: 0;
+	padding-bottom: 30px;
+}
+
+/* quando le tabelle passano su una colonna sola aggiungi linea alla fine
+   della prima tabella */
+@media (max-width: 992px) { 
+	.deepblue-section__table:first-child tr:last-child {
+		border-bottom: 1px solid grey;
+	}
+}
+
+.deepblue-section td {
+	padding: 8px;
+}
+
+.table__citycode {
+	width: 20%;
+	font-weight: 700;
+}
+
+.table__city {
+	width: 55%;
+	color: lightgrey;
+}
+
+.table__testspeed {
+	width: 25%;
+	color: #01C7C7;
+	font-weight: 700;
+}
+
+
+
+
+
+/*---------------------------------*/
+/* # # PARTNER OPINION SECTION # # */
+/*---------------------------------*/
+/* partneropinion-section
+	  row
+		partneropinion-section__header
+	  row
+		partneropinion-section__container
+		partneropinion-section__dot
+*/
+#partneropinion-section__container {
+	text-align: center;
+	color: rgba(3,27,78,.7);
+	font-weight: 300;
+}
+
+#partneropinion-section__logo {
+	height: 18px;
+	margin-top: 30px;
+}
+
+#partneropinion-section__quote {
+	max-width: 500px;
+	margin: 25px auto 15px;
+	font-size: 1.8rem;
+}
+
+#partneropinion-section__quoter {
+	font-size: 1.4rem;
+}
+
+#partneropinion-section__caption {
+	font-size: 1.1rem;
+	margin-bottom: 20px;
+}
+
+#partneropinion-section__dot {
+	text-align: center;
+	margin: 50px 0 60px;
+}
+
+#partneropinion-section__container a {
+	font-weight: 700;
+}
+
+
+
+
+
+/*---------------------------------*/
+/* # # GET STARTED NOW SECTION # # */
+/*---------------------------------*/
+/* getstarted-section
+	  row
+		partneropinion-section__header
+*/
+.getstarted-section {
+	background-image: url("../Resources/images/startnow-bg.jpg");
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	padding: 50px 0;
+	color: #FFF;
+}
+
+.getstarted-section h3 {
+	margin: 0 0 15px;
+	font-weight: 700;
+}
+
+.getstarted-section__button {
+	color: #0065FC;
+	font-weight: 700;
+	border-radius: 3px;
+}
+
+.getstarted-section__button:hover {
+	color: #0065FC;
+	background-color: #DDD;
+}
+
+
+
+
+
+/*------------------------*/
+/* # # FOOTER SECTION # # */
+/*------------------------*/
+/* footer
+	  row
+		footer-container
+		footer-container
+		footer-container
+		footer-container
+		footer-container
+*/
+footer {
+	background-color: #05152C;
+	color: hsla(0,0%,100%,.5);
+}
+
+.footer__container {
+	padding: 80px 20px 60px;
+}
+
+.footer__container li {
+	margin-bottom: 5px;
+}
+
+.footer__container li:first-child {
+	color: #FFF;
+	margin-bottom: 9px;
+}
+
+.footer__social-icon {
+	fill: hsla(0,0%,100%,.5);
+  	margin: 15px 8px 0 0;
+}
+
+.footer__social-icon:hover {
+	fill: #FFF;
+}
+
+/*riposizionamento ul*/
+@media (max-width: 992px) { 
+	
+	.footer__container {
+		padding: 0 20px 20px;
+	}
+
+	.footer__container:first-child {
+		padding: 80px 20px 30px;
+	}
+
+	.footer__container:last-child {
+		padding: 0 20px 60px;
+	}
+
+}
