@@ -266,32 +266,33 @@ header a:hover {
 /* # # PARTNER BRIDGE # # */
 /*------------------------*/
 /* partner-bridge
-	  row
 		<h5>
 		partner-bridge__icon-container
 		<a>
 */
-.partner-bridge {
+#partner-bridge {
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
-.partner-bridge h5 {
+#partner-bridge h5 {
 	text-transform: uppercase;
 	color: darkgrey;
 	font-weight: 600;
 }
 
-.partner-bridge__icon-container img {
+.partner-bridge__icon {
 	height: 30px;
 	margin: 20px;
 }
 
-.partner-bridge a {
-	display: inline-block;
+#partner-bridge a {
 	margin: 10px;
 }
 
-/*sposto un po' su certi loghi dai 20px di partenza per centrarli meglio*/
+/*correzione posizioni di certi loghi per centrarli meglio:*/
 #docker-logo {
 	margin-top: 12px;
 }
