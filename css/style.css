@@ -36,6 +36,13 @@ body {
 	padding: 0;
 }
 
+.flex-center {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
 .section__header {
 	text-align: center;
 	margin: 60px 0 30px;
@@ -186,10 +193,10 @@ header a:hover {
 /*-------------------*/
 /* # # JUMBOTRON # # */
 /*-------------------*/
-/* jumbotron
+/*jumbotron
 	  row
-		jumbotron__left-section
-		jumbotron__right-section
+		  jumbotron__left-section
+		  jumbotron__right-section
 */
 .jumbotron {
 	background-image: url("../Resources/images/jumbotron-bg.jpg");
@@ -198,39 +205,34 @@ header a:hover {
 	color: #FFF;
 }
 
+/*sovrascrivo border radius di Bootstrap*/
 .container .jumbotron, .container-fluid .jumbotron {
 	border-radius: 0;
 }
 
-.jumbotron__left-section {
-	margin: 70px 10px;
-}
-
-.jumbotron__left-section h1 {
+#jumbotron__left-section h1 {
 	font-size: 56px;
 }
 
-.jumbotron__left-section p {
+#jumbotron__left-section p {
 	margin-top: 20px;
 	line-height: 32px;
 }
 
-.jumbotron__right-section {
+#jumbotron__right-section {
 	width: 300px;
-	float: right;
-	margin-right: 50px;
 	padding: 20px;
 	text-align: center;
 	color: #000;
 	background-color: white;
 }
 
-.jumbotron__right-section h2 {
+#jumbotron__right-section h2 {
 	font-size: 25px;
 	margin-bottom: 20px;
 }
 
-.jumbotron__right-section p {
+#jumbotron__right-section p {
 	margin-top: 20px;
 	font-size: 12px;
 }
@@ -241,11 +243,9 @@ header a:hover {
 	margin-top: 13px;
 }
 
-/*centra contenitore bianco a dx con visualizzaz. verticale*/
 @media (max-width: 992px) { 
-	.jumbotron__right-section {
-		float: none;
-		margin: 0 auto 60px auto;
+	#jumbotron__right-section {
+		margin: 20px 0 15px;
 	}
 }
 
@@ -255,7 +255,7 @@ header a:hover {
 /*tolgo bordo alle caselle di inserimento dati del form*/
 .form-control {
 	border: 0;
-    box-shadow: none;
+  box-shadow: none;
 }
 
 
