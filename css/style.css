@@ -102,6 +102,8 @@ header {
 	position: fixed;
 	width: 100%;
 	top: 0;
+	background-color: #FFF;
+	z-index: 100;
 }
 
 header * {
@@ -267,7 +269,7 @@ header a:hover {
 /*------------------------*/
 /* partner-bridge
 		<h5>
-		partner-bridge__icon-container
+		div > .partner-bridge__icon
 		<a>
 */
 #partner-bridge {
@@ -288,10 +290,6 @@ header a:hover {
 	margin: 20px;
 }
 
-#partner-bridge a {
-	margin: 10px;
-}
-
 /*correzione posizioni di certi loghi per centrarli meglio:*/
 #docker-logo {
 	margin-top: 12px;
@@ -301,6 +299,10 @@ header a:hover {
 	margin-top: 8px;
 }
 
+#partner-bridge a {
+	margin: 10px;
+}
+
 
 
 
@@ -308,62 +310,63 @@ header a:hover {
 /*--------------------------*/
 /* # # FEATURES SECTION # # */
 /*--------------------------*/
-/* features-section
+/*features
 	  row
-		features-section__header
+		  h2 + p // titolo sezione
 	  row
-		features-section__leftmenu
-		features-section__rightcontent
-		  features-section__rightcontent__container
-		  features-section__rightcontent__container
-		  features-section__rightcontent__container
-		  features-section__rightcontent__container
+		  features__leftsection
+		    ul voci menù
+		  features__rightsection
+		    features__rightsection__container
+		    features__rightsection__container
+		    features__rightsection__container
+		    features__rightsection__container
 */
 
-.features-section__leftmenu {
+#features__leftsection {
 	height: 400px;		/*da md in giù dovrà ridursi*/
 	padding: 30px 100px;
 }
 
-.features-section__leftmenu li {
+#features__leftsection li {
 	padding: 12px 20px;
 }
 
-.features-section__leftmenu li a {
+#features__leftsection li a {
 	color: #000;
 }
 
-.features-section__leftmenu li:hover {
+#features__leftsection li:hover {
 	font-weight: 700;
 	border-left: 2.5px solid blue;
 }
 
-.features-section__leftmenu li:hover a {
+#features__leftsection li:hover a {
 	text-decoration: none;
 }
 
-.features-section__rightcontent {
+#features__rightsection {
 	padding-bottom: 60px;
 }
 
-.features-section__rightcontent__container {
+.features__rightsection__container {
 	padding: 15px 30px;
 }
 
 
 @media (max-width: 1200px) { 
 
-	.features-section__leftmenu {
+	#features__leftsection {
 		height: 38px;
 		padding: 0;
 		text-align: center;
 	}
 
-	.features-section__leftmenu li {
+	#features__leftsection li {
 		display: inline-block;
 	}
 
-	.features-section__leftmenu li:hover {
+	#features__leftsection li:hover {
 		border-left: 0;
 		border-bottom: 2.5px solid blue;
 	}
