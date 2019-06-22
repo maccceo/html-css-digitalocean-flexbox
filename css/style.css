@@ -36,11 +36,18 @@ body {
 	padding: 0;
 }
 
-.flex-center {
+.flex-row-center {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
+}
+
+.flex-column-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .section__header {
@@ -52,6 +59,10 @@ le iconcine nelle sezioni "Deploy and scale" e "Build for business"
 .blueicon {
 	height: 2.3rem;
 	margin: -4px 3px 0 0;
+}
+
+.dot-container {
+	text-align: center;
 }
 
 .dot {
@@ -381,18 +392,23 @@ header a:hover {
 /* # # SLIDESHOW SECTION # # */
 /*---------------------------*/
 /* slideshow-section
-	  row
-		slideshow-section__header
-	  row
-		slideshow-section__slideshow
+	  section__header
+	  div
+		  slideshow-section__slideshow
+		  frecce ai lati
+		  dot-container
 */
-.slideshow-section__slideshow {
-	text-align: center;
+#slideshow-section {
 	padding-bottom: 60px;
 }
+
 #slideshow-section__slideshow__image {
-	max-width: 600px;
 	margin: 20px 0;
+	width: 600px;
+}
+
+@media (max-width: 992px) { 
+	
 }
 
 
