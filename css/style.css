@@ -418,21 +418,21 @@ header a:hover {
 /*--------------------------------*/
 /* # # BUILD4BUSINESS SECTION # # */
 /*--------------------------------*/
-/* b4b-section
+/*b4b-section
 	  row
-		b4b-section__header
+	    b4b-section__header
 	  row
-		b4b-section__content
-		  b4b-section__content__section
-		  b4b-section__content__section
-		  b4b-section__content__section
+		  b4b-section__content
+		    b4b-section__content__section
+		    b4b-section__content__section
+		    b4b-section__content__section
 */
-.b4b-section__header {
+#b4b-section__header {
 	margin-bottom: 10px;
 }
 
 .b4b-section__content__section {
-	padding: 15px 30px 60px;
+	padding: 15px 30px 50px;
 }
 
 .b4b-section__content__section a {
