@@ -448,15 +448,15 @@ header a:hover {
 /*--------------------------*/
 /* # # DEEPBLUE SECTION # # */
 /*--------------------------*/
-/* deepblue-section
+/*deepblue-section
 	  row
-		deepblue-section__header
+		  deepblue-section__header
 	  row
-		deepblue-section__content
-		  deepblue-section__content__table
-		  deepblue-section__content__table
+		  deepblue-section__content
+		    deepblue-section__content__table
+		    deepblue-section__content__table
 */
-.deepblue-section {
+#deepblue-section {
 	background-image:
 		linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
 		url("../Resources/images/deepblue-bg.jpg");
@@ -465,20 +465,30 @@ header a:hover {
 	color: #FFF;
 }
 
-.deepblue-section__content {
+#deepblue-section__content {
 	margin-bottom: 60px;
 }
 
-.deepblue-section__table > table {
-	margin: 0 auto;
+.deepblue-section__table {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+
 }
 
-.deepblue-section tr {
+.deepblue-section__table > table {
+	flex: 0 0 auto;
+	width: 100%;
+}
+
+#deepblue-section tr {
 	width: 100%;
 	border-bottom: 1px solid grey;
 }
 
-.deepblue-section tr:last-child {
+#deepblue-section tr:last-child {
 	border-bottom: 0;
 	padding-bottom: 30px;
 }
@@ -486,12 +496,12 @@ header a:hover {
 /* quando le tabelle passano su una colonna sola aggiungi linea alla fine
    della prima tabella */
 @media (max-width: 992px) { 
-	.deepblue-section__table:first-child tr:last-child {
+	#deepblue-section__table:first-child tr:last-child {
 		border-bottom: 1px solid grey;
 	}
 }
 
-.deepblue-section td {
+#deepblue-section td {
 	padding: 8px;
 }
 
